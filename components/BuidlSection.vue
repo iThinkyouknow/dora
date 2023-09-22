@@ -43,12 +43,12 @@
                 present and connect with each other.
             </p>
             <div class="flex gap-4">
-                <div class="w-2/5">
+                <div class="w-7/12">
                     <ButtonPrimary>
                         Submit BUIDL
                     </ButtonPrimary>
                 </div>
-                <ButtonGhost class="w-3/5">
+                <ButtonGhost class="w-7/12">
                     Create BUIDL Collection
                 </ButtonGhost>
             </div>

@@ -76,8 +76,10 @@ watch(show, () => {
     requestAnimationFrame(addToAnimatedValue)
 })
 
-watch(props, () => {
-    if (!props.isIntersecting) return;
+const isIntersecting = computed(() => props.isIntersecting)
+
+watch(isIntersecting, () => {
+    if (!isIntersecting.value) return;
     setTimeout(() => {
         show.value = true;
     }, 300 * props.order)
