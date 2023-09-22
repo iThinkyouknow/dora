@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'MiriamLibre';
+    src: url('/fonts/Miriam_Libre/MiriamLibre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'MiriamLibre';
+    src: url('/fonts/Miriam_Libre/MiriamLibre-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    min-width: 1280px;
+}
