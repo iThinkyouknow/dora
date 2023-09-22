@@ -1,3 +1,16 @@
+<style>
+.buidl-details-container:hover .buidl-img {
+    @apply -translate-x-2
+}
+
+.buidl-details-container:hover .buidl-details {
+    @apply -translate-x-1
+}
+
+.buidl-details-container:hover .buidl-track {
+    @apply translate-x-1
+}
+</style>
 <template>
     <div class="flex gap-32">
         <div class="left border border-orange-500/20 rounded-lg w-7/12 p-8">
@@ -18,15 +31,15 @@
                     </div>
                 </div>
                 <a v-for="buidlName in buidlNames" :key="buidlName.link" :href="buidlName.link"
-                    class="flex py-2 gap-2 justify-between">
+                    class="flex py-2 gap-2 justify-between buidl-details-container">
                     <div class="w-2/3 flex gap-2 items-center">
-                        <img :src="buidlName.src" alt="img" width="64">
-                        <div class="flex flex-col overflow-hidden">
+                        <img :src="buidlName.src" alt="img" width="64" class="buidl-img transition-transform ease-in-out ">
+                        <div class="flex flex-col overflow-hidden buidl-details transition-transform ease-in-out ">
                             <h5 class="text-lg">{{ buidlName.title }}</h5>
                             <p class="text-xs text-gray-400 truncate ">{{ buidlName.subtitle }}</p>
                         </div>
                     </div>
-                    <div class="w-1/3 flex-1 flex gap-2 items-center">
+                    <div class="w-1/3 flex-1 flex gap-2 items-center buidl-track transition-transform ease-in-out ">
                         <span v-for="track in buidlName.tracks" :key="track"
                             class="bg-orange-300/20 text-orange-400 text-xs p-1 rounded">{{ track }}</span>
                     </div>
